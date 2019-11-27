@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock , Paper , Scissors?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-cf-o2d">
                                         <rect key="frame" x="35.5" y="106" width="240" height="27.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
-                                        <color key="textColor" white="0.17060004340277779" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suN-ed-Yov">
@@ -80,31 +81,91 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQC-kV-6eb">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycP-iu-ofb">
                                         <rect key="frame" x="117" y="0.0" width="117" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-e1-qw8">
                                         <rect key="frame" x="234" y="0.0" width="117" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEx-8L-Efq" userLabel="timer">
+                                <rect key="frame" x="8" y="45.5" width="359" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-Ki-ne3">
+                                <rect key="frame" x="99" y="467" width="177" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsv-1X-4Fy" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="SJq-F3-c4M"/>
+                                        </constraints>
+                                        <state key="normal" title="Play again">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playAgainBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1o-MF-ZOv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-Rb-B6S" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
+                                        <rect key="frame" x="108" y="0.0" width="69" height="30"/>
+                                        <state key="normal" title="Exit">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="exitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWL-JF-HHS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.80392156862745101" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LaJ-Ki-ne3" firstAttribute="top" secondItem="Zp6-SB-bCZ" secondAttribute="bottom" constant="17.5" id="Afj-dZ-KBh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TEx-8L-Efq" secondAttribute="trailing" constant="8" id="GJn-xb-Di2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LaJ-Ki-ne3" secondAttribute="trailing" constant="99" id="IyI-bB-hvK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyh-Nb-FCl" secondAttribute="trailing" constant="12" id="W6Z-C7-Til"/>
                             <constraint firstItem="cyh-Nb-FCl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="eyK-SI-yI3"/>
                             <constraint firstItem="cyh-Nb-FCl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="g8k-b5-gKP"/>
+                            <constraint firstItem="TEx-8L-Efq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ic8-Gp-9Y1"/>
+                            <constraint firstItem="LaJ-Ki-ne3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="jtc-tC-x7s"/>
                             <constraint firstItem="Zp6-SB-bCZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qIY-Iq-YgE"/>
                             <constraint firstItem="Zp6-SB-bCZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tmF-uy-1RV"/>
+                            <constraint firstItem="TEx-8L-Efq" firstAttribute="top" secondItem="cyh-Nb-FCl" secondAttribute="bottom" constant="10" id="vrN-Qx-ama"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -113,17 +174,20 @@
                         <outlet property="botChoice" destination="tum-WF-C3H" id="XM6-8M-KsX"/>
                         <outlet property="botScore" destination="EaP-e1-qw8" id="7i9-9v-GZf"/>
                         <outlet property="drawScore" destination="ycP-iu-ofb" id="hot-VZ-thB"/>
+                        <outlet property="exitBtn" destination="t3e-Rb-B6S" id="Qul-rd-Jgm"/>
                         <outlet property="paperBtn" destination="G7f-yk-YJR" id="StF-z9-EfR"/>
+                        <outlet property="playAgainBtn" destination="rsv-1X-4Fy" id="v1A-Jl-zxH"/>
                         <outlet property="rockBtn" destination="RrO-8h-XBX" id="g6n-6f-xwm"/>
                         <outlet property="scissorsBtn" destination="aA2-vf-yDI" id="ea2-Gq-3Bz"/>
                         <outlet property="statusLabel" destination="PHj-cf-o2d" id="qpz-3c-fZd"/>
+                        <outlet property="timerLbl" destination="TEx-8L-Efq" id="Sfe-Ks-ZTE"/>
                         <outlet property="userChoice" destination="suN-ed-Yov" id="Z9y-Ge-ahi"/>
                         <outlet property="userScore" destination="jQC-kV-6eb" id="zwk-67-VGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="132"/>
+            <point key="canvasLocation" x="989.60000000000002" y="131.78410794602701"/>
         </scene>
         <!--MenuView-->
         <scene sceneID="0CQ-0f-C9E">
@@ -134,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-nN-hFq">
-                                <rect key="frame" x="30" y="286.5" width="315" height="94"/>
+                                <rect key="frame" x="30" y="316.5" width="315" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-NY-KJe" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
@@ -154,42 +218,45 @@
                                                 <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-z0-1G4" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="315" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Online Game">
-                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <state key="disabled" title="Online Game"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onlinegameBtn:" destination="yZx-HA-Acf" eventType="touchUpInside" id="dOZ-4y-L7k"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="P8r-Om-fRq"/>
+                                            <action selector="localGameBtn:" destination="yZx-HA-Acf" eventType="touchUpInside" id="eCb-T7-Lmz"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="wa6-Vo-lZl"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-x3-g79">
+                                <rect key="frame" x="276" y="629" width="91" height="30"/>
+                                <state key="normal" title="Game Center"/>
+                                <connections>
+                                    <action selector="GameCenterBtn:" destination="yZx-HA-Acf" eventType="touchUpInside" id="VpB-Ia-tVR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd5-xt-MAX">
+                                <rect key="frame" x="8" y="638.5" width="92" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="8Gd-rw-4zT"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="Dns-hD-uvh"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Bd5-xt-MAX" secondAttribute="bottom" constant="8" id="GBq-af-QTL"/>
                             <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="qYa-nN-hFq" secondAttribute="trailing" constant="30" id="K60-gu-Nim"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="SYp-gv-MjS"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="WhG-fq-Kh7"/>
+                            <constraint firstItem="Bd5-xt-MAX" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="8" id="Ygk-V3-tAD"/>
                             <constraint firstItem="qYa-nN-hFq" firstAttribute="centerY" secondItem="aw3-i9-FMh" secondAttribute="centerY" id="aCX-K2-MOh"/>
                             <constraint firstItem="qYa-nN-hFq" firstAttribute="centerX" secondItem="SRx-yt-Uap" secondAttribute="centerX" id="isq-QI-hSm"/>
                             <constraint firstItem="qYa-nN-hFq" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="30" id="wOp-Sm-9uB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SRx-yt-Uap"/>
                     </view>
+                    <connections>
+                        <outlet property="player" destination="Bd5-xt-MAX" id="slS-Rn-wqw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chk-ha-qmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

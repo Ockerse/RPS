@@ -26,6 +26,7 @@ final class GameCenterHelper: NSObject {
     return match.isLocalPlayersTurn
   }
   
+    
   override init() {
     super.init()
     
@@ -141,6 +142,15 @@ extension GameCenterHelper: GKLocalPlayerListener {
     
     NotificationCenter.default.post(name: .presentGame, object: match)
   }
+    
+    func loadPhoto(for size: GKPlayer.PhotoSize,
+                   withCompletionHandler completionHandler: ((UIImage?, Error?) -> Void)? = nil){
+        
+    }
+    
+    
+    
+    
 }
 
 extension Notification.Name {
