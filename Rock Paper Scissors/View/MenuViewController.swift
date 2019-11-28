@@ -13,15 +13,6 @@ import GameKit
 
 class MenuViewController: UIViewController {
     
-  
-
-    //var playername :String = GKLocalPlayer.local.displayName
-    @IBOutlet weak var player: UILabel!
-    @IBOutlet weak var playerImage: UIImageView!
-    
-    
-    
-    
     func showLeaderboards() {
         let gcVC = GKGameCenterViewController()
         gcVC.gameCenterDelegate = self
@@ -34,8 +25,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         GameCenterHelper.helper.viewController = self
         // Do any additional setup after loading the view.
-        
-        player.text = "\(GKLocalPlayer.local.displayName.self)"
+       
         
     }
     

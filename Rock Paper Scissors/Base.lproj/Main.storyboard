@@ -104,26 +104,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-Ki-ne3">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-Ki-ne3">
                                 <rect key="frame" x="99" y="467" width="177" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsv-1X-4Fy" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="SJq-F3-c4M"/>
+                                            <constraint firstAttribute="width" constant="115" id="SJq-F3-c4M"/>
+                                            <constraint firstAttribute="height" constant="30" id="Vdn-lh-GLy"/>
                                         </constraints>
-                                        <state key="normal" title="Play again">
-                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Play again?">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0065869421649999999" green="0.45004291769999999" blue="0.040714633370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
                                                 <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                <color key="value" red="0.0065869421649999999" green="0.45004291769999999" blue="0.040714633370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -131,19 +138,28 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-Rb-B6S" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
-                                        <rect key="frame" x="108" y="0.0" width="69" height="30"/>
+                                        <rect key="frame" x="123" y="0.0" width="54" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="cPo-ak-WsN"/>
+                                        </constraints>
                                         <state key="normal" title="Exit">
-                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67470854920000001" green="0.1024873746" blue="0.1024873746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
                                                 <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                <color key="value" red="0.67470854920000001" green="0.1024873746" blue="0.1024873746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -197,25 +213,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-nN-hFq">
-                                <rect key="frame" x="30" y="316.5" width="315" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-x3-g79">
+                                <rect key="frame" x="276" y="629" width="91" height="30"/>
+                                <state key="normal" title="Game Center">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="GameCenterBtn:" destination="yZx-HA-Acf" eventType="touchUpInside" id="VpB-Ia-tVR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QXx-J3-FKS">
+                                <rect key="frame" x="16" y="350" width="343" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-NY-KJe" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <state key="normal" title="Local Game">
-                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-NY-KJe" customClass="RoundedButton" customModule="RPS_go" customModuleProvider="target">
+                                        <rect key="frame" x="101.5" y="0.0" width="140" height="40"/>
+                                        <color key="backgroundColor" red="0.11167576718593117" green="0.679535687" blue="0.076187544515941535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NYV-fN-5y5"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="s9k-T9-XN1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Start Game"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.027357621120000002" green="0.44905608889999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                <color key="value" red="0.027357621120000002" green="0.44905608889999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -225,38 +258,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-x3-g79">
-                                <rect key="frame" x="276" y="629" width="91" height="30"/>
-                                <state key="normal" title="Game Center"/>
-                                <connections>
-                                    <action selector="GameCenterBtn:" destination="yZx-HA-Acf" eventType="touchUpInside" id="VpB-Ia-tVR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd5-xt-MAX">
-                                <rect key="frame" x="8" y="638.5" width="92" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="8Gd-rw-4zT"/>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="Dns-hD-uvh"/>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Bd5-xt-MAX" secondAttribute="bottom" constant="8" id="GBq-af-QTL"/>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="qYa-nN-hFq" secondAttribute="trailing" constant="30" id="K60-gu-Nim"/>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="SYp-gv-MjS"/>
-                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="WhG-fq-Kh7"/>
-                            <constraint firstItem="Bd5-xt-MAX" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="8" id="Ygk-V3-tAD"/>
-                            <constraint firstItem="qYa-nN-hFq" firstAttribute="centerY" secondItem="aw3-i9-FMh" secondAttribute="centerY" id="aCX-K2-MOh"/>
-                            <constraint firstItem="qYa-nN-hFq" firstAttribute="centerX" secondItem="SRx-yt-Uap" secondAttribute="centerX" id="isq-QI-hSm"/>
-                            <constraint firstItem="qYa-nN-hFq" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="30" id="wOp-Sm-9uB"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="Mrr-C2-i5O"/>
+                            <constraint firstItem="QXx-J3-FKS" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="16" id="OFg-2n-7TS"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="UJK-jp-unT"/>
+                            <constraint firstItem="QXx-J3-FKS" firstAttribute="top" secondItem="SRx-yt-Uap" secondAttribute="top" constant="350" id="W6s-2X-fAD"/>
+                            <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="QXx-J3-FKS" secondAttribute="trailing" constant="16" id="lY9-C9-4Bz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SRx-yt-Uap"/>
                     </view>
-                    <connections>
-                        <outlet property="player" destination="Bd5-xt-MAX" id="slS-Rn-wqw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chk-ha-qmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

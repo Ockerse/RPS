@@ -122,6 +122,11 @@ class GameVC: UIViewController {
             
             drawScoreInt += 1
             //defaults.set(drawScoreInt, forKey: SaveKeys.drawScoreKey)
+            
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                           self.view.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+                       })
+            
             updateScores()
             return "Draw!"
         } else if (user == "👊🏻" && computer == "✋🏻") || (user == "✋🏻" && computer == "✌🏻") || (user == "✌🏻" && computer == "👊🏻") {
@@ -220,17 +225,26 @@ class GameVC: UIViewController {
         
         
         if(botScoreInt > userScoreInt){
-            botChoice.text = "🤖"
-            statusLabel.text = "WON!"
+            botChoice.text = "👎"
+            statusLabel.text = "YOU LOST!"
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.view.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
+            })
         }
         else if(userScoreInt > botScoreInt) {
-            botChoice.text = "You"
-            statusLabel.text = "WON!"
+            botChoice.text = "👏"
+            statusLabel.text = "YOU WON!"
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.view.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
+            })
             addScoreAndSubmitToGC()
         }
         else {
-            botChoice.text = ""
+            botChoice.text = "🤝"
             statusLabel.text = "TIE!"
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                                      self.view.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+                                  })
         }
         
         playAgainBtn.isHidden = false
