@@ -258,13 +258,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7x-ae-ZcX">
+                                <rect key="frame" x="141" y="34" width="93.5" height="74"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="52"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="Jj1-x3-g79" secondAttribute="trailing" constant="8" id="Mrr-C2-i5O"/>
                             <constraint firstItem="QXx-J3-FKS" firstAttribute="leading" secondItem="SRx-yt-Uap" secondAttribute="leading" constant="16" id="OFg-2n-7TS"/>
+                            <constraint firstItem="S7x-ae-ZcX" firstAttribute="centerX" secondItem="SRx-yt-Uap" secondAttribute="centerX" id="Tq5-Fz-vnG"/>
                             <constraint firstItem="SRx-yt-Uap" firstAttribute="bottom" secondItem="Jj1-x3-g79" secondAttribute="bottom" constant="8" id="UJK-jp-unT"/>
                             <constraint firstItem="QXx-J3-FKS" firstAttribute="top" secondItem="SRx-yt-Uap" secondAttribute="top" constant="350" id="W6s-2X-fAD"/>
+                            <constraint firstItem="S7x-ae-ZcX" firstAttribute="top" secondItem="SRx-yt-Uap" secondAttribute="top" constant="34" id="Zk1-dV-rRq"/>
                             <constraint firstItem="SRx-yt-Uap" firstAttribute="trailing" secondItem="QXx-J3-FKS" secondAttribute="trailing" constant="16" id="lY9-C9-4Bz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SRx-yt-Uap"/>

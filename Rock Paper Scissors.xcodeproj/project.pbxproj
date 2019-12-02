@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5201786238DD23100CFC80F /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201785238DD23100CFC80F /* Reference.swift */; };
+		B5201786238DD23100CFC80F /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201785238DD23100CFC80F /* ID.swift */; };
 		B524B2082386218C00FA7E45 /* GameCenterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B2072386218C00FA7E45 /* GameCenterHelper.swift */; };
 		B524B20C2386222800FA7E45 /* GKTurnBaseMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */; };
 		B524B2182386332400FA7E45 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B2172386332400FA7E45 /* RoundedButton.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B5201785238DD23100CFC80F /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		B5201785238DD23100CFC80F /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		B524B2072386218C00FA7E45 /* GameCenterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterHelper.swift; sourceTree = "<group>"; };
 		B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKTurnBaseMatch.swift; sourceTree = "<group>"; };
 		B524B2172386332400FA7E45 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				C6F7C48121119A8A007E283F /* Info.plist */,
 				B524B20A238621E500FA7E45 /* View */,
 				B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */,
-				B5201785238DD23100CFC80F /* Reference.swift */,
+				B5201785238DD23100CFC80F /* ID.swift */,
 			);
 			path = "Rock Paper Scissors";
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				C6F7C48A2111BD50007E283F /* Sign.swift in Sources */,
 				B524B21C2386443200FA7E45 /* MenuViewController.swift in Sources */,
 				C6F7C47621119A89007E283F /* AppDelegate.swift in Sources */,
-				B5201786238DD23100CFC80F /* Reference.swift in Sources */,
+				B5201786238DD23100CFC80F /* ID.swift in Sources */,
 				B524B2082386218C00FA7E45 /* GameCenterHelper.swift in Sources */,
 				B524B20C2386222800FA7E45 /* GKTurnBaseMatch.swift in Sources */,
 			);
