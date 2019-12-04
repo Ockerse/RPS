@@ -12,6 +12,13 @@ Step-by-step coding instructions
 
 Conclusions
 =======
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 Paragraphs are separated
 -----------
 by a blank line.
