@@ -200,7 +200,7 @@ class GameVC: UIViewController {
         // Get the current score
         let score: Int = userScoreInt
         // Get the Leaderboard ID
-        let IDn: String = ID.LEADERBOARD_ID
+        let IDn: String = ID.HIGHSCORE
         
         // Create a GKScore object and add the points to it
         let bestScoreInt = GKScore(leaderboardIdentifier: IDn)
@@ -216,6 +216,26 @@ class GameVC: UIViewController {
         }
     }
     
+    func report(score: Int64, ID: String) {
+      let reportedScore = GKScore(leaderboardIdentifier: ID)
+      reportedScore.value = score
+      GKScore.report([reportedScore]) { (error) in
+        guard error == nil else {
+        print(error?.localizedDescription ?? "")
+        return
+        }
+      print("The score submitted to the game center")
+      }
+    }
+    
+    func reportAchievement(percentComplete:Double, ID: String) {
+      let achievement = GKAchievement(identifier: ID)
+      achievement.percentComplete = percentComplete
+      achievement.showsCompletionBanner = true
+      GKAchievement.report([achievement]) { (error) in
+        print(error?.localizedDescription ?? "")
+      }
+    }
     func gameOver() {
         
         self.timerLbl.text = "GAME OVER"
