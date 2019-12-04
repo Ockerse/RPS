@@ -1,6 +1,3 @@
-Heading
-=======
-
 Overview
 =======
 
