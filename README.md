@@ -25,7 +25,6 @@ Text attributes _italic_,
 Horizontal rule:
 
 ---
-
 Strikethrough:
 ~~strikethrough~~
 
