@@ -7,7 +7,11 @@ Overview
 Getting started
 =======
 
+Step-by-step coding instructions
+=======
 
+Conclusions
+=======
 Paragraphs are separated
 -----------
 by a blank line.
