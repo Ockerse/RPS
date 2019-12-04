@@ -345,15 +345,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = L4C26EK8EJ;
+=======
+				DEVELOPMENT_TEAM = TV5NBZ3PVB;
+>>>>>>> Stashed changes
 				INFOPLIST_FILE = "Rock Paper Scissors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				PRODUCT_BUNDLE_IDENTIFIER = "lydia.ir.Rock-Paper-Scissors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = ueckerherman.ockerse.rpsgame;
+				PRODUCT_NAME = "RPS go";
+>>>>>>> Stashed changes
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,15 +374,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = L4C26EK8EJ;
+=======
+				DEVELOPMENT_TEAM = TV5NBZ3PVB;
+>>>>>>> Stashed changes
 				INFOPLIST_FILE = "Rock Paper Scissors/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				PRODUCT_BUNDLE_IDENTIFIER = "lydia.ir.Rock-Paper-Scissors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = ueckerherman.ockerse.rspgame;
+				PRODUCT_NAME = "RPS go";
+>>>>>>> Stashed changes
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
