@@ -28,6 +28,7 @@ Horizontal rule:
 
 Strikethrough:
 ~~strikethrough~~
+
 Bullet list:
 
   * apples
