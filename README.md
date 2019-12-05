@@ -17,7 +17,12 @@ To use Game Center's features you have to authenticate the player with Game Cent
 
 
 Once your app is registered, select it and go to <b>Features>Game Center</b>
+
 ![Image](doc/appstoreGC.png "App Store Game Center")
+
+From here you can manage all of your achievements and leaderboards. When you make a new leaderboard or achievement keep in mind that the identifier you choose cannot be changed later. You will use this identifier in your code to save players progress and data to the leaderboard or achievement that corresponds to the identifier.
+
+You are now ready to start implementing Game Center in your code.
 
 Step-by-step coding instructions
 =======
