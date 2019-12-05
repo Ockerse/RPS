@@ -5,6 +5,12 @@ The following tutorial will be using Apple's Gamekit framework using Swift 5. Wi
 Getting started
 =======
 
+Set up Game Center in XCode project
+----
+Go to <b>PROJECT>TARGETS>Signing & Capabilites</b></br>
+Click the plus sign next to capabilities to add a new capability. In the prompt that pops up search for Game Center. When complete it should show up like below.
+
+
 Step-by-step coding instructions
 =======
 
