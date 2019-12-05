@@ -30,6 +30,29 @@ You are now ready to start implementing Game Center in your code.
 Step-by-step coding instructions
 =======
 
+Picking a game
+----
+There are many routes you can take with this depending on what game interests you the most, however, for this demonstration we will be using a Rock, Paper, Scissors game by Rminsh free to use [Link to repository](https://github.com/Rminsh/RPS)
+
+```swift
+import Foundation
+class ID {
+    
+    // Leaderboards
+    static let HIGHSCORE = "ueckerherman.ockerse.rps.leaderboard"
+    
+    
+    //Achievements
+    static let WIN_1 = "username.rps.WinOneGame"
+    static let WIN_5 = "username.rps.WinFive"
+    static let WIN_10 = "username.rps.WinTen"
+    static let WIN_15 = "username.rps.WinFifteen"
+    static let WIN_20 = "username.rps.WinTwenty"
+    static let WIN_100 = "username.rps.WinHundred"
+    
+}
+```
+
 Conclusions
 =======
 
