@@ -18,7 +18,7 @@ class ID {
     static let WIN_5 = "ueckerherman.ockerse.rps.WinFive"
     static let WIN_10 = "ueckerherman.ockerse.rps.WinTen"
     static let WIN_15 = "ueckerherman.ockerse.rps.WinFifteen"
-    static let WIN_20 = ""
-    static let WIN_100 = ""
+    static let WIN_20 = "ueckerherman.ockerse.rps.WinTwenty"
+    static let WIN_100 = "ueckerherman.ockerse.rps.WinHundred"
     
 }

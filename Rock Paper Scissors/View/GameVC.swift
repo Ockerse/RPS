@@ -11,10 +11,12 @@ import GameplayKit
 import GameKit
 
 
-class GameVC: UIViewController {
+class GameVC: UIViewController{
     var playername = GKLocalPlayer.local
     var choice : String!
     let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
+    var SD = ScoreData()
+  
     @IBOutlet weak var rockBtn: UIButton!
     @IBOutlet weak var paperBtn: UIButton!
     @IBOutlet weak var scissorsBtn: UIButton!
@@ -27,10 +29,18 @@ class GameVC: UIViewController {
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var playAgainBtn: RoundedButton!
     @IBOutlet weak var exitBtn: RoundedButton!
+   
     
+    var win1 = 0.0
+    var win5 = 0.0
+    var win10 = 0.0
+    var win15 = 0.0
+    var win20 = 0.0
+    var win100 = 0.0
     
     @IBAction func playAgainBtn(_ sender: Any) {
         newGame()
+        SD.loadAchievementProgress()
     }
     
     @IBAction func exitButton(_ sender: Any) {
@@ -42,7 +52,7 @@ class GameVC: UIViewController {
     
     
     
-   // let defaults: UserDefaults = UserDefaults.standard
+   let defaults: UserDefaults = UserDefaults.standard
     var drawScoreInt : Int = 0
     var userScoreInt : Int = 0
     var botScoreInt : Int = 0
@@ -60,7 +70,7 @@ class GameVC: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
         playAgainBtn.isHidden = true
         exitBtn.isHidden = true
-       
+        
     }
 
     
@@ -74,6 +84,8 @@ class GameVC: UIViewController {
                timer = nil
             gameOver()
            }
+        
+        
        }
     
     @IBAction func rockBtnPressed(_ sender: Any) {
@@ -194,6 +206,8 @@ class GameVC: UIViewController {
         drawScoreInt=0
         updateScores()
         timerLbl.text = "30s"
+        
+        SD.loadAchievementProgress()
     }
     
     func addScoreAndSubmitToGC() {
@@ -228,14 +242,11 @@ class GameVC: UIViewController {
       }
     }
     
-    func reportAchievement(percentComplete:Double, ID: String) {
-      let achievement = GKAchievement(identifier: ID)
-      achievement.percentComplete = percentComplete
-      achievement.showsCompletionBanner = true
-      GKAchievement.report([achievement]) { (error) in
-        print(error?.localizedDescription ?? "")
-      }
-    }
+    
+
+   
+    
+    
     func gameOver() {
         
         self.timerLbl.text = "GAME OVER"
@@ -258,6 +269,7 @@ class GameVC: UIViewController {
                 self.view.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
             })
             addScoreAndSubmitToGC()
+            SD.updateAchievementProgress()
         }
         else {
             botChoice.text = "🤝"
@@ -269,6 +281,8 @@ class GameVC: UIViewController {
         
         playAgainBtn.isHidden = false
         exitBtn.isHidden = false
+        
+        SD.loadAchievementProgress()
         
     }
     

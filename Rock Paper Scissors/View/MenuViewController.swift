@@ -13,18 +13,29 @@ import GameKit
 
 class MenuViewController: UIViewController {
     
+    var SD = ScoreData()
+    
     func showLeaderboards() {
         let gcVC = GKGameCenterViewController()
         gcVC.gameCenterDelegate = self
         gcVC.viewState = .leaderboards
-        gcVC.leaderboardIdentifier = ID.LEADERBOARD_ID
+        //gcVC.leaderboardIdentifier = ID.HIGHSCORE
         present(gcVC, animated: true, completion: nil)
     }
+  
+    var win_5 = 0.0
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        
+       
         GameCenterHelper.helper.viewController = self
         // Do any additional setup after loading the view.
+      
+        
+        // Load achievement progressq2frdweituy
+        SD.loadAchievementProgress()
        
         
     }
@@ -38,6 +49,11 @@ class MenuViewController: UIViewController {
     }
       //  GameCenterHelper.helper.presentMatchmaker()
 }
+
+
+
+
+
 
 func loadPlayers(forIdentifiers identifiers: [String],
                  withCompletionHandler completionHandler: (([GKPlayer]?, Error?) -> Void)? = nil){

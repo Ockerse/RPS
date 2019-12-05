@@ -12,6 +12,8 @@
 		B524B20C2386222800FA7E45 /* GKTurnBaseMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */; };
 		B524B2182386332400FA7E45 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B2172386332400FA7E45 /* RoundedButton.swift */; };
 		B524B21C2386443200FA7E45 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B21B2386443200FA7E45 /* MenuViewController.swift */; };
+		B59DD95F23986003003E756A /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DD95E23986003003E756A /* Achievements.swift */; };
+		B59DD9612398B7AB003E756A /* ScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DD9602398B7AB003E756A /* ScoreData.swift */; };
 		C6A12D012115B61E004A9A5E /* SaveKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A12D002115B61E004A9A5E /* SaveKeys.swift */; };
 		C6F7C47621119A89007E283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7C47521119A89007E283F /* AppDelegate.swift */; };
 		C6F7C47821119A89007E283F /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7C47721119A89007E283F /* GameVC.swift */; };
@@ -27,6 +29,8 @@
 		B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKTurnBaseMatch.swift; sourceTree = "<group>"; };
 		B524B2172386332400FA7E45 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B524B21B2386443200FA7E45 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B59DD95E23986003003E756A /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		B59DD9602398B7AB003E756A /* ScoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreData.swift; sourceTree = "<group>"; };
 		C6A12D002115B61E004A9A5E /* SaveKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveKeys.swift; sourceTree = "<group>"; };
 		C6F7C47221119A89007E283F /* RPS go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPS go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F7C47521119A89007E283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				B524B20A238621E500FA7E45 /* View */,
 				B524B20B2386222800FA7E45 /* GKTurnBaseMatch.swift */,
 				B5201785238DD23100CFC80F /* ID.swift */,
+				B59DD95E23986003003E756A /* Achievements.swift */,
+				B59DD9602398B7AB003E756A /* ScoreData.swift */,
 			);
 			path = "Rock Paper Scissors";
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				B5201786238DD23100CFC80F /* ID.swift in Sources */,
 				B524B2082386218C00FA7E45 /* GameCenterHelper.swift in Sources */,
 				B524B20C2386222800FA7E45 /* GKTurnBaseMatch.swift in Sources */,
+				B59DD9612398B7AB003E756A /* ScoreData.swift in Sources */,
+				B59DD95F23986003003E756A /* Achievements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
