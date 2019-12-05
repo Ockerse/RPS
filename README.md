@@ -17,7 +17,7 @@ To use Game Center's features you have to authenticate the player with Game Cent
 
 
 Once your app is registered, select it and go to <b>Features>Game Center</b>
-![Image](appstoreGC.png "App Store Game Center")
+![Image](doc/appstoreGC.png "App Store Game Center")
 
 Step-by-step coding instructions
 =======
