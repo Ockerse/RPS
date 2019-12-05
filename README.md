@@ -13,7 +13,7 @@ Click the plus sign next to capabilities to add a new capability. In the prompt 
 
 Register your game with App Store Connect
 ----
-To use Game Center's features you have to authenticate the player with Game Center. Before you can do that your game must be registered with Apple. To register head over to [App Store Connect]https://appstoreconnect.apple.com/ website (This does require an Apple Developer Account). 
+To use Game Center's features you have to authenticate the player with Game Center. Before you can do that your game must be registered with Apple. To register head over to [App Store Connect](https://appstoreconnect.apple.com) website (This does require an Apple Developer Account). 
 
 
 Once your app is registered, select it and go to <b>Features>Game Center</b>
