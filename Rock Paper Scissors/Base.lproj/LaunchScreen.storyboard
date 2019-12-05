@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Eol-1u-fUD">
-                                <rect key="frame" x="48.5" y="259" width="278.5" height="149.5"/>
+                                <rect key="frame" x="62" y="259" width="251" height="149.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock , Paper , Scissors!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-8I-pTW">
-                                        <rect key="frame" x="0.0" y="0.0" width="278.5" height="31.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-8I-pTW">
+                                        <rect key="frame" x="100.5" y="0.0" width="50.5" height="31.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="46s-TH-kX3">
-                                        <rect key="frame" x="13.5" y="51.5" width="251" height="98"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="251" height="98"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8l-SH-R6H">
                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="98"/>
@@ -54,7 +54,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99215686274509807" green="0.6621537351919935" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12816786769999999" green="0.14452549819999999" blue="0.1825574338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.078343115480000003" green="0.024934249339999999" blue="0.056392846560000001" alpha="0.97642872430000005" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Eol-1u-fUD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1Op-9n-Gen"/>
                             <constraint firstItem="Eol-1u-fUD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6ph-Ug-Vrn"/>

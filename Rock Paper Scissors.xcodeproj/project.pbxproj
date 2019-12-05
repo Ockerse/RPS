@@ -14,6 +14,8 @@
 		B524B21C2386443200FA7E45 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524B21B2386443200FA7E45 /* MenuViewController.swift */; };
 		B59DD95F23986003003E756A /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DD95E23986003003E756A /* Achievements.swift */; };
 		B59DD9612398B7AB003E756A /* ScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DD9602398B7AB003E756A /* ScoreData.swift */; };
+		B59DD9642398D0C1003E756A /* ProdottoInCina.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B59DD9632398D0C1003E756A /* ProdottoInCina.ttf */; };
+		B59DD9662398ECC1003E756A /* ColorStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DD9652398ECC1003E756A /* ColorStackView.swift */; };
 		C6A12D012115B61E004A9A5E /* SaveKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A12D002115B61E004A9A5E /* SaveKeys.swift */; };
 		C6F7C47621119A89007E283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7C47521119A89007E283F /* AppDelegate.swift */; };
 		C6F7C47821119A89007E283F /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F7C47721119A89007E283F /* GameVC.swift */; };
@@ -31,6 +33,8 @@
 		B524B21B2386443200FA7E45 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B59DD95E23986003003E756A /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		B59DD9602398B7AB003E756A /* ScoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreData.swift; sourceTree = "<group>"; };
+		B59DD9632398D0C1003E756A /* ProdottoInCina.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProdottoInCina.ttf; sourceTree = "<group>"; };
+		B59DD9652398ECC1003E756A /* ColorStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStackView.swift; sourceTree = "<group>"; };
 		C6A12D002115B61E004A9A5E /* SaveKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveKeys.swift; sourceTree = "<group>"; };
 		C6F7C47221119A89007E283F /* RPS go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPS go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F7C47521119A89007E283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +71,17 @@
 				C6F7C47721119A89007E283F /* GameVC.swift */,
 				B524B21B2386443200FA7E45 /* MenuViewController.swift */,
 				B524B2172386332400FA7E45 /* RoundedButton.swift */,
+				B59DD9652398ECC1003E756A /* ColorStackView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B59DD9622398D093003E756A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B59DD9632398D0C1003E756A /* ProdottoInCina.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		B6A963ADB0E09F9F69FD0B8A /* Pods */ = {
@@ -98,6 +111,7 @@
 		C6F7C47421119A89007E283F /* Rock Paper Scissors */ = {
 			isa = PBXGroup;
 			children = (
+				B59DD9622398D093003E756A /* Fonts */,
 				B524B209238621D000FA7E45 /* Helpers */,
 				C6F7C47521119A89007E283F /* AppDelegate.swift */,
 				C6F7C4892111BD50007E283F /* Sign.swift */,
@@ -177,6 +191,7 @@
 				C6F7C48021119A8A007E283F /* LaunchScreen.storyboard in Resources */,
 				C6F7C47D21119A8A007E283F /* Assets.xcassets in Resources */,
 				C6F7C47B21119A89007E283F /* Main.storyboard in Resources */,
+				B59DD9642398D0C1003E756A /* ProdottoInCina.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +209,7 @@
 				B524B21C2386443200FA7E45 /* MenuViewController.swift in Sources */,
 				C6F7C47621119A89007E283F /* AppDelegate.swift in Sources */,
 				B5201786238DD23100CFC80F /* ID.swift in Sources */,
+				B59DD9662398ECC1003E756A /* ColorStackView.swift in Sources */,
 				B524B2082386218C00FA7E45 /* GameCenterHelper.swift in Sources */,
 				B524B20C2386222800FA7E45 /* GKTurnBaseMatch.swift in Sources */,
 				B59DD9612398B7AB003E756A /* ScoreData.swift in Sources */,

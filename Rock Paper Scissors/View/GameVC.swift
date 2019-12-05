@@ -30,6 +30,7 @@ class GameVC: UIViewController{
     @IBOutlet weak var playAgainBtn: RoundedButton!
     @IBOutlet weak var exitBtn: RoundedButton!
    
+    @IBOutlet weak var playAgainView: ColorStackView!
     
     var win1 = 0.0
     var win5 = 0.0
@@ -70,7 +71,7 @@ class GameVC: UIViewController{
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
         playAgainBtn.isHidden = true
         exitBtn.isHidden = true
-        
+        playAgainView.isHidden = true
     }
 
     
@@ -136,14 +137,14 @@ class GameVC: UIViewController{
             //defaults.set(drawScoreInt, forKey: SaveKeys.drawScoreKey)
             
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                           self.view.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+                           self.view.backgroundColor = #colorLiteral(red: 0.6634730851, green: 0.4901956655, blue: 0.14628277, alpha: 1)
                        })
             
             updateScores()
             return "Draw!"
         } else if (user == "👊🏻" && computer == "✋🏻") || (user == "✋🏻" && computer == "✌🏻") || (user == "✌🏻" && computer == "👊🏻") {
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                self.view.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
+                self.view.backgroundColor = #colorLiteral(red: 0.6596407043, green: 0.1820560495, blue: 0.1526315029, alpha: 1)
             })
             whiteLabels()
             botScoreInt += 1
@@ -152,7 +153,7 @@ class GameVC: UIViewController{
             return "You Lose"
         } else {
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                self.view.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
+                self.view.backgroundColor = #colorLiteral(red: 0.06999487557, green: 0.4483745148, blue: 0.1872373435, alpha: 1)
             })
             whiteLabels()
             userScoreInt += 1
@@ -173,7 +174,7 @@ class GameVC: UIViewController{
     
     func resetItems() {
         UIView.animate(withDuration: 0.2, animations: { () -> Void in
-            self.view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            self.view.backgroundColor = #colorLiteral(red: 0.1281678677, green: 0.1445254982, blue: 0.1825574338, alpha: 1)
             self.statusLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             self.userScore.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             self.botScore.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -199,8 +200,9 @@ class GameVC: UIViewController{
         resetItems()
         timeLeft = 30
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
-        playAgainBtn.isHidden = true
-        exitBtn.isHidden = true
+       playAgainBtn.isHidden = true
+       exitBtn.isHidden = true
+        playAgainView.isHidden = true
         userScoreInt=0
         botScoreInt=0
         drawScoreInt=0
@@ -259,14 +261,14 @@ class GameVC: UIViewController{
             botChoice.text = "👎"
             statusLabel.text = "YOU LOST!"
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                self.view.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
+                self.view.backgroundColor = #colorLiteral(red: 0.6596407043, green: 0.1820560495, blue: 0.1526315029, alpha: 1)
             })
         }
         else if(userScoreInt > botScoreInt) {
             botChoice.text = "👏"
             statusLabel.text = "YOU WON!"
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                self.view.backgroundColor = #colorLiteral(red: 0.1529411765, green: 0.6823529412, blue: 0.3764705882, alpha: 1)
+                self.view.backgroundColor = #colorLiteral(red: 0.06999487557, green: 0.4483745148, blue: 0.1872373435, alpha: 1)
             })
             addScoreAndSubmitToGC()
             SD.updateAchievementProgress()
@@ -275,12 +277,15 @@ class GameVC: UIViewController{
             botChoice.text = "🤝"
             statusLabel.text = "TIE!"
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                                      self.view.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+                                      self.view.backgroundColor = #colorLiteral(red: 0.6634730851, green: 0.4901956655, blue: 0.14628277, alpha: 1)
                                   })
         }
         
-        playAgainBtn.isHidden = false
-        exitBtn.isHidden = false
+        playAgainView.isHidden = false
+       playAgainBtn.isHidden = false
+       exitBtn.isHidden = false
+        
+        
         
         SD.loadAchievementProgress()
         
