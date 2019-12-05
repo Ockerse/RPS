@@ -1,6 +1,6 @@
 Overview
 =======
-The following tutorial will be using Apple's Gamekit framework using the Swift language. With Gamekit we can create applications that allow us to interact with other iOS users through Game Centers own network.  
+The following tutorial will be using Apple's Gamekit framework using Swift 5. With Gamekit we can create applications that allow us to interact with other iOS users through Game Centers own network.  
 
 Getting started
 =======
