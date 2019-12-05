@@ -3,7 +3,9 @@ Overview
 The following tutorial will be using Apple's Gamekit framework using Swift 5. With Gamekit we can create applications that allow us to interact with other iOS users through Game Centers own network. Some of the many examples you can implement to your own application are: achievements, leaderboards, and challenges. Through Game Center you are also able to add real time multiplayer or turn base multiplayer. 
 
 ![Image](doc/Screen Shot 2019-12-05 at 3.50.51 PM.png "Main Menu")
+
 ![Image](doc/achievements_screen.png "Achievement Screen")
+
 ![Image](doc/leaderboards_screen.png "Leaderboard Screen")
 
 Getting started
