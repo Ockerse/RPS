@@ -157,7 +157,7 @@ Common Mistakes
 
 Game not recognized by Game Center
 ---
-![Image](doc/notRecognized.png "Game not recognized")
+![Image](doc/notRecognized_50_1_50.png "Game not recognized")
 
 Storing and returning scores
 ---
