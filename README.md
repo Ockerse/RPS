@@ -61,6 +61,26 @@ Game Center identifiers
 ---
 In our code we saved leaderboard and achievement identifiers in a class called **ID**. Each identifier is a constant so that it can be easily used within the entire project. 
 
+```swift
+import Foundation
+class ID {
+    
+    // Leaderboards
+    static let HIGHSCORE = "ueckerherman.ockerse.rps.leaderboard"
+    
+    
+    //Achievements
+    static let WIN_1 = "username.rps.WinOneGame"
+    static let WIN_5 = "username.rps.WinFive"
+    static let WIN_10 = "username.rps.WinTen"
+    static let WIN_15 = "username.rps.WinFifteen"
+    static let WIN_20 = "username.rps.WinTwenty"
+    static let WIN_100 = "username.rps.WinHundred"
+    
+}
+```
+
+
 Viewing achievements in Game Center
 ---
 ```swift
@@ -88,63 +108,8 @@ Similar to the achivements, we can do the same for leaderboards. The only differ
 
 Submit scores to Game Center
 ---
-
-Update achievement progress
----
-
-
-
-Creating classes
-----
-
-The first class we will be creating will be creating variables based on the unique ID you created on the Apple Developer console. The code snibbet below is an example referencing the ones we created above this will be used later with the game logic.  
-
 ```swift
-import Foundation
-class ID {
-    
-    // Leaderboards
-    static let HIGHSCORE = "ueckerherman.ockerse.rps.leaderboard"
-    
-    
-    //Achievements
-    static let WIN_1 = "username.rps.WinOneGame"
-    static let WIN_5 = "username.rps.WinFive"
-    static let WIN_10 = "username.rps.WinTen"
-    static let WIN_15 = "username.rps.WinFifteen"
-    static let WIN_20 = "username.rps.WinTwenty"
-    static let WIN_100 = "username.rps.WinHundred"
-    
-}
-```
-```swift
-import Foundation
-import GameKit
-
-class ScoreData {
-    
-    func ScoreData() {}
-    
-    func loadAchievementProgress() {
-    GKAchievement.loadAchievements() { achievements, error in
-           guard let achievements = achievements else { return }
-          print(achievements)
-          
-          for ach in achievements {
-            
-              print("\(ach.identifier) : \(ach.percentComplete)")
-              
-              for (key, _) in Progress {
-                  if(ach.identifier == key){
-                      Progress.updateValue(ach.percentComplete, forKey: ach.identifier)
-                  }
-              }
-          }
-         }
-    }
-    
-    
-    func reportAchievement(pc: Double, ID: String ) {
+  func reportAchievement(pc: Double, ID: String ) {
         let achievement = GKAchievement(identifier: ID)
           
         achievement.percentComplete = pc
@@ -155,24 +120,12 @@ class ScoreData {
           print(error?.localizedDescription ?? "")
         }
       }
-    
-    
-    func getProgressVal(forKey: String) -> Double{
-      // let res = Progress[forKey]
-      //  return res!
-        
-        for (key, val) in Progress {
-            if(key == forKey){
-                return val
-            }
-        }
-        
-        return 0.0
-    }
-    
-    
-    
-    func updateAchievementProgress() {
+```
+
+Update achievement progress
+---
+```swift
+  func updateAchievementProgress() {
      
         
         
@@ -200,20 +153,6 @@ class ScoreData {
     
     
 }
-```
-
-```swift
-import Foundation
-
-
-var Progress: [String: Double] = [
-    ID.WIN_1: 0.0,
-    ID.WIN_5 : 0.0,
-    ID.WIN_10 : 0.0,
-    ID.WIN_15 : 0.0,
-    ID.WIN_20 : 0.0,
-    ID.WIN_100: 0.0
-]
 ```
 
 Conclusions
