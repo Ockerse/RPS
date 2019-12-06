@@ -62,21 +62,18 @@ Game Center identifiers
 In our code we saved leaderboard and achievement identifiers in a class called **ID**. Each identifier is a constant so that it can be easily used within the entire project. 
 
 ```swift
-import Foundation
 class ID {
     
     // Leaderboards
     static let HIGHSCORE = "ueckerherman.ockerse.rps.leaderboard"
-    
-    
+   
     //Achievements
-    static let WIN_1 = "username.rps.WinOneGame"
-    static let WIN_5 = "username.rps.WinFive"
-    static let WIN_10 = "username.rps.WinTen"
-    static let WIN_15 = "username.rps.WinFifteen"
-    static let WIN_20 = "username.rps.WinTwenty"
-    static let WIN_100 = "username.rps.WinHundred"
-    
+    static let WIN_1 = "ueckerherman.ockerse.rps.WinOneGame"
+    static let WIN_5 = "ueckerherman.ockerse.rps.WinFive"
+    static let WIN_10 = "ueckerherman.ockerse.rps.WinTen"
+    static let WIN_15 = "ueckerherman.ockerse.rps.WinFifteen"
+    static let WIN_20 = "ueckerherman.ockerse.rps.WinTwenty"
+    static let WIN_100 = "ueckerherman.ockerse.rps.WinHundred"
 }
 ```
 
@@ -109,96 +106,48 @@ Similar to the achivements, we can do the same for leaderboards. The only differ
 Submit scores to Game Center
 ---
 ```swift
-  func reportAchievement(pc: Double, ID: String ) {
+  func reportScore(score: Int64, ID: String) {
+        let reportedScore = GKScore(leaderboardIdentifier: ID)
+        reportedScore.value = score
+        GKScore.report([reportedScore]) { (error) in
+          guard error == nil else {
+          print(error?.localizedDescription ?? "")
+          return
+          }
+        }
+      }
+```
+To submit a score to Game Center you need to create a `GameKit` GKScore object with the leaderboard indentifier you are updating. We called this `reportedScore`.Then you set the `reportedScore.value` to the value of the score, keep in mind the score must be an `Int64`. 
+
+Update achievement progress
+---
+```swift
+   func reportAchievement(pc: Double, ID: String ) {
         let achievement = GKAchievement(identifier: ID)
-          
         achievement.percentComplete = pc
-          print("percent complete: \(achievement.percentComplete) for: \(ID)")
-    
         achievement.showsCompletionBanner = true
         GKAchievement.report([achievement]) { (error) in
           print(error?.localizedDescription ?? "")
         }
       }
 ```
+To update an achievements progress you create a `GameKit` GKAchievement object with the achievement identifier you are updating. We called it achievements. Then you can set the `achievements.percentComplete` to new progress percentage, keep in mind that the progress is a double. If an achievement is not incrementally earned, then you can set the `achievements.progressComplete` to `100.00` when the achivement requirements are met.
 
-Update achievement progress
+Getting current values from Game Center
 ---
+You can load data from Game Center to use within your game. Below we load the current achievement progress for the player each time the game is loaded and re-loaded when a match is complete.
 ```swift
-  func updateAchievementProgress() {
-     
-        
-        
-        let ONE_ONE : Double = 1/1 * 100
-        let ONE_FIFTH: Double = 1/5 * 100
-        let ONE_TEN: Double = 1/10 * 100
-        let ONE_FIFTEEN: Double = 1/15 * 100
-        let ONE_TWENTY: Double = 1/20 * 100
-        let ONE_HUNDRED: Double = 1/100 * 100
-        
-       
-        reportAchievement(pc: getProgressVal(forKey: ID.WIN_1)+ONE_ONE, ID: ID.WIN_1)
-        reportAchievement(pc: getProgressVal(forKey: ID.WIN_5)+ONE_FIFTH, ID: ID.WIN_5)
-        reportAchievement(pc: getProgressVal(forKey: ID.WIN_10)+ONE_TEN, ID: ID.WIN_10)
-        reportAchievement(pc: getProgressVal(forKey: ID.WIN_15)+ONE_FIFTEEN, ID: ID.WIN_15)
-        reportAchievement(pc: getProgressVal(forKey: ID.WIN_20)+ONE_TWENTY, ID: ID.WIN_20)
-        //print("Progress val: \(getProgressVal(forKey: ID.WIN_100))")
-        reportAchievement(pc: (getProgressVal(forKey: ID.WIN_100)+ONE_HUNDRED), ID: ID.WIN_100)
-    
-        
-        loadAchievementProgress()
-        
+func loadAchievementProgress() {
+    GKAchievement.loadAchievements() { achievements, error in
+        guard let achievements = achievements else { return }
+          for ach in achievements {
+              for (key, _) in Progress {
+                  if(ach.identifier == key){
+                      Progress.updateValue(ach.percentComplete, forKey: ach.identifier)
+                  }
+              }
+          }
+         }
     }
-    
-    
-    
-}
 ```
-
-Conclusions
-=======
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-Paragraphs are separated
------------
-by a blank line.
-
-
-Two spaces at the end of a line  
-produces a line break.
-
-Text attributes _italic_, 
-**bold**, `monospace`.
-
-Horizontal rule:
-
-
----
-Strikethrough:
-~~strikethrough~~
-
-Bullet list:
-
-  * apples
-  * oranges
-  * pears
-
-Numbered list:
-
-  1. lather
-  2. rinse
-  3. repeat
-
-An [example](http://example.com).
-
-![Image](Icon-pictures.png "icon")
-test
-
-> Markdown uses email-style > characters for blockquoting.
-
-Inline <abbr title="Hypertext Markup Language">HTML</abbr> is supported.
+The `GKAchievement.loadAchievements()` is an asynchronous call that returns the achievement data. When loaded, we save the data locally in a dictionary called `Progress`.
