@@ -151,3 +151,13 @@ func loadAchievementProgress() {
     }
 ```
 The `GKAchievement.loadAchievements()` is an asynchronous call that returns the achievement data. When loaded, we save the data locally in a dictionary called `Progress`.
+
+Common Mistakes
+===
+
+Game not recognized by Game Center
+---
+![Image](doc/notRecognized.png "Game not recognized")
+
+Storing and returning scores
+---
