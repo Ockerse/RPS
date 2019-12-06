@@ -169,6 +169,6 @@ DispatchQueue.main.async {
     //load scores and data
 }
 ```
-Conclusion
+Overview
 =======
 Implementing leaderboards and achievements is very easy and streamlined. With our examples you can implement the functions with any game that suites your style if you so choose. If at any point you need to see what a finalized version would look like feel free to browse our [code](https://github.com/Ockerse/RPS) here. 
