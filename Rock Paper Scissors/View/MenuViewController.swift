@@ -29,22 +29,11 @@ class MenuViewController: UIViewController {
         gcVC.viewState = .achievements
         present(gcVC, animated: true, completion: nil)
     }
-  
-    var win_5 = 0.0
-    
+
     override func viewDidLoad() {
-    
         super.viewDidLoad()
-        
-       
         GameCenterHelper.helper.viewController = self
-        // Do any additional setup after loading the view.
-      
-        
-        // Load achievement progressq2frdweituy
         SD.loadAchievementProgress()
-       
-        
     }
     
     @IBAction func localGameBtn(_ sender: Any) {
@@ -57,13 +46,7 @@ class MenuViewController: UIViewController {
     @IBAction func GameCenterBtn(_ sender: Any) {
         showLeaderboards()
     }
-      //  GameCenterHelper.helper.presentMatchmaker()
 }
-
-
-
-
-
 
 func loadPlayers(forIdentifiers identifiers: [String],
                  withCompletionHandler completionHandler: (([GKPlayer]?, Error?) -> Void)? = nil){

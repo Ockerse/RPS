@@ -213,6 +213,7 @@
                     <connections>
                         <outlet property="botChoice" destination="tum-WF-C3H" id="XM6-8M-KsX"/>
                         <outlet property="botScore" destination="EaP-e1-qw8" id="7i9-9v-GZf"/>
+                        <outlet property="controlsView" destination="uOP-FS-Dcx" id="3Wm-1g-t0l"/>
                         <outlet property="drawScore" destination="ycP-iu-ofb" id="hot-VZ-thB"/>
                         <outlet property="exitBtn" destination="t3e-Rb-B6S" id="Qul-rd-Jgm"/>
                         <outlet property="paperBtn" destination="G7f-yk-YJR" id="StF-z9-EfR"/>

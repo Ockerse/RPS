@@ -12,7 +12,7 @@ import GameKit
 
 
 class GameVC: UIViewController{
-    var playername = GKLocalPlayer.local
+
     var choice : String!
     let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
     var SD = ScoreData()
@@ -32,6 +32,7 @@ class GameVC: UIViewController{
    
     @IBOutlet weak var playAgainView: ColorStackView!
     
+    @IBOutlet weak var controlsView: UIStackView!
     var win1 = 0.0
     var win5 = 0.0
     var win10 = 0.0
@@ -51,30 +52,21 @@ class GameVC: UIViewController{
     var timer:Timer?
     var timeLeft = 30
     
-    
-    
-   let defaults: UserDefaults = UserDefaults.standard
     var drawScoreInt : Int = 0
     var userScoreInt : Int = 0
     var botScoreInt : Int = 0
     
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //drawScoreInt = Int(defaults.integer(forKey: SaveKeys.drawScoreKey))
-        //userScoreInt = Int(defaults.integer(forKey: SaveKeys.userScoreKey))
-        //botScoreInt = Int(defaults.integer(forKey: SaveKeys.botScoreKey))
         updateScores()
-        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
         playAgainBtn.isHidden = true
         exitBtn.isHidden = true
         playAgainView.isHidden = true
+        controlsView.isHidden = false
     }
 
-    
+    // MARK: Timer
     @objc func onTimerFires()
        {
            timeLeft -= 1
@@ -83,10 +75,9 @@ class GameVC: UIViewController{
            if timeLeft <= 0 {
             timer?.invalidate()
                timer = nil
+            controlsView.isHidden = true
             gameOver()
            }
-        
-        
        }
     
     @IBAction func rockBtnPressed(_ sender: Any) {
@@ -102,7 +93,6 @@ class GameVC: UIViewController{
     @IBAction func scissors(_ sender: Any) {
         choice = "✌🏻"
         getResult()
-        
     }
 
     func getResult() {
@@ -129,17 +119,13 @@ class GameVC: UIViewController{
         }
     }
     
+    //MARK: Calculate Results
     func calculateResult(user: String , computer: String) -> String {
         if user == computer {
-            //drawScoreInt = drawScoreInt + 1
-            
             drawScoreInt += 1
-            //defaults.set(drawScoreInt, forKey: SaveKeys.drawScoreKey)
-            
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                            self.view.backgroundColor = #colorLiteral(red: 0.6634730851, green: 0.4901956655, blue: 0.14628277, alpha: 1)
-                       })
-            
+            })
             updateScores()
             return "Draw!"
         } else if (user == "👊🏻" && computer == "✋🏻") || (user == "✋🏻" && computer == "✌🏻") || (user == "✌🏻" && computer == "👊🏻") {
@@ -148,7 +134,6 @@ class GameVC: UIViewController{
             })
             whiteLabels()
             botScoreInt += 1
-            //defaults.set(botScoreInt, forKey: SaveKeys.botScoreKey)
             updateScores()
             return "You Lose"
         } else {
@@ -157,7 +142,6 @@ class GameVC: UIViewController{
             })
             whiteLabels()
             userScoreInt += 1
-            //defaults.set(userScoreInt, forKey: SaveKeys.userScoreKey)
             updateScores()
             return "You win!"
         }
@@ -186,76 +170,39 @@ class GameVC: UIViewController{
         userChoice.isHidden = true
         botChoice.text = "🤖"
         statusLabel.text = "Rock, Paper, Scissors?"
-        
     }
-    
+ 
+    // MARK: Update Scores
     func updateScores() {
         userScore.text = "You: \(Int(userScoreInt))"
         drawScore.text = "Draw: \(Int(drawScoreInt))"
         botScore.text = "Bot: \(Int(botScoreInt))"
     }
-    
-    
+    // MARK: New Game
     func newGame() {
         resetItems()
         timeLeft = 30
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
-       playAgainBtn.isHidden = true
-       exitBtn.isHidden = true
+        playAgainBtn.isHidden = true
+        exitBtn.isHidden = true
         playAgainView.isHidden = true
+        controlsView.isHidden = false
         userScoreInt=0
         botScoreInt=0
         drawScoreInt=0
         updateScores()
         timerLbl.text = "30s"
-        
+    
         SD.loadAchievementProgress()
     }
     
-    func addScoreAndSubmitToGC() {
-        // Get the current score
-        let score: Int = userScoreInt
-        // Get the Leaderboard ID
-        let IDn: String = ID.HIGHSCORE
-        
-        // Create a GKScore object and add the points to it
-        let bestScoreInt = GKScore(leaderboardIdentifier: IDn)
-        bestScoreInt.value = Int64(score)
-        
-        // Submit score to GC leaderboard
-        GKScore.report([bestScoreInt]) { (error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                print("Highscore sent to GameCenter")
-            }
-        }
-    }
-    
-    func report(score: Int64, ID: String) {
-      let reportedScore = GKScore(leaderboardIdentifier: ID)
-      reportedScore.value = score
-      GKScore.report([reportedScore]) { (error) in
-        guard error == nil else {
-        print(error?.localizedDescription ?? "")
-        return
-        }
-      print("The score submitted to the game center")
-      }
-    }
-    
-    
-
-   
-    
-    
+    // MARK: Game Over
     func gameOver() {
-        
-        self.timerLbl.text = "GAME OVER"
+        controlsView.isHidden = true
         paperBtn.isHidden = true
         scissorsBtn.isHidden = true
         rockBtn.isHidden = true
-        
+        self.timerLbl.text = "GAME OVER"
         
         if(botScoreInt > userScoreInt){
             botChoice.text = "👎"
@@ -270,7 +217,7 @@ class GameVC: UIViewController{
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                 self.view.backgroundColor = #colorLiteral(red: 0.06999487557, green: 0.4483745148, blue: 0.1872373435, alpha: 1)
             })
-            addScoreAndSubmitToGC()
+            SD.reportScore(score:Int64(userScoreInt), ID: ID.HIGHSCORE)
             SD.updateAchievementProgress()
         }
         else {
