@@ -68,12 +68,12 @@ class ID {
     static let HIGHSCORE = "ueckerherman.ockerse.rps.leaderboard"
    
     //Achievements
-    static let WIN_1 = "ueckerherman.ockerse.rps.WinOneGame"
-    static let WIN_5 = "ueckerherman.ockerse.rps.WinFive"
-    static let WIN_10 = "ueckerherman.ockerse.rps.WinTen"
-    static let WIN_15 = "ueckerherman.ockerse.rps.WinFifteen"
-    static let WIN_20 = "ueckerherman.ockerse.rps.WinTwenty"
-    static let WIN_100 = "ueckerherman.ockerse.rps.WinHundred"
+    static let WIN_1 = "username.rps.WinOneGame"
+    static let WIN_5 = "username.rps.WinFive"
+    static let WIN_10 = "username.rps.WinTen"
+    static let WIN_15 = "username.rps.WinFifteen"
+    static let WIN_20 = "username.rps.WinTwenty"
+    static let WIN_100 = "usernamerps.WinHundred"
 }
 ```
 
