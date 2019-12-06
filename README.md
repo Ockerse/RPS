@@ -27,7 +27,7 @@ From here you can manage all of your achievements and leaderboards. When you mak
 
 You are now ready to start implementing `Game Center` in your code.
 
-Implementing Game Center
+Step-by-step coding instructions
 =======
 
 Authenticating player
@@ -171,3 +171,4 @@ DispatchQueue.main.async {
 ```
 Conclusion
 =======
+
