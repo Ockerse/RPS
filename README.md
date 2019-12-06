@@ -27,7 +27,7 @@ From here you can manage all of your achievements and leaderboards. When you mak
 
 You are now ready to start implementing `Game Center` in your code.
 
-Step-by-step coding instructions
+Implementing Game Center
 =======
 
 Authenticating player
@@ -46,7 +46,7 @@ The first that you want to think about is authenticating the player, and then so
     }
   }
 ```
-The code above will present the Game Center login ViewController if the local player has not signed in. If the player has been signed before, the next time they open the game a notification badge will show at the top of the screen welcoming the player back.
+The code above will present the Game Center login `ViewController` if the local player has not signed in. If the player has been signed before, the next time they open the game a notification badge will show at the top of the screen welcoming the player back.
 
 You have to add a GameKit delegate to dimiss the Game Center ViewController
 ```swift
@@ -88,7 +88,7 @@ func showAchievements() {
         present(gcVC, animated: true, completion: nil)
     }
 ```
-This code instantiates the `Game Center ViewController` and assigns it to the delegate. The `viewState` is set to `.achievements` to load the achievements view. Lastly, the `ViewController` is presented to the screen.
+This code instantiates the Game Center `ViewController` and assigns it to the delegate. The `viewState` is set to `.achievements` to load the achievements view. Lastly, the `ViewController` is presented to the screen.
 
 Viewing leaderboard in Game Center
 ---
