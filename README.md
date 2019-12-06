@@ -158,9 +158,16 @@ Common Mistakes
 Game not recognized by Game Center
 ---
 ![Image](doc/notRecognized_50_1_50.png "Game not recognized")
+When this happens it means your game is not registered with App Store Connect or the bundle identifier does not match what is registered in the App Store Connect. Double check to make sure your bundle identifier in Xcode matches what is in the App Store Connect for your app.
 
 Storing and returning scores
 ---
+Since the call to get scores and achievements is asychronous, storing and then call the data structure where the scores are stored locally can cause some unexpected results. To fix this you can tell the main thread to wait until the asychronous call is done.
 
+```swift
+DispatchQueue.main.async {
+    //load scores and data
+}
+```
 Conclusion
 =======
