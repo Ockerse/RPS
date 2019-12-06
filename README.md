@@ -38,7 +38,7 @@ There are many routes you can take with this depending on what game interests yo
 Creating classes
 ----
 
-The first class we will be creating will keep track of 
+The first class we will be creating will be creating variables based on the unique ID you created on the Apple Developer console. The code snibbet below is an example referencing the ones we created above this will be used later with the game logic.  
 
 ```swift
 import Foundation
