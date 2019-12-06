@@ -144,14 +144,6 @@ class ScoreData {
 ```
 
 ```swift
-
-//
-//  Achievements.swift
-//  Rock Paper Scissors
-//
-//  Created by Carson Uecker-Herman on 12/4/19.
-//  Copyright © 2019 armin. All rights reserved.
-//
 import Foundation
 
 
