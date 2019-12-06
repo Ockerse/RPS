@@ -11,7 +11,7 @@ Getting started
 Set up Game Center in XCode project
 ----
 Go to **PROJECT>TARGETS>Signing & Capabilites**<br />
-Click the plus sign next to capabilities to add a new capability. In the prompt that pops up search for Game Center. When complete it should show up like below.
+Click the plus sign next to capabilities to add a new capability. In the prompt that pops up search for `Game Center`. When complete it should show up like below.
 
 
 Register your game with App Store Connect
@@ -32,7 +32,7 @@ Step-by-step coding instructions
 
 Authenticating player
 ---
-The first that you want to think about is authenticating the player, and then sooner you do this the better. The best time is after the loading screen or when the initial ViewController gets loaded. 
+The first that you want to think about is authenticating the player, and then sooner you do this the better. The best time is after the loading screen or when the initial `ViewController` gets loaded. 
 ```swift
  GKLocalPlayer.local.authenticateHandler = { gcAuthVC, error in
       if GKLocalPlayer.local.isAuthenticated {
@@ -71,7 +71,7 @@ func showAchievements() {
         present(gcVC, animated: true, completion: nil)
     }
 ```
-This code instantiates the <i>Game Center ViewController</i> and assigns it to the delegate. The viewState is set to <i>.achievements</i> to load the achievements view. Lastly, the <i>ViewController</i> is presented to the screen.
+This code instantiates the `Game Center ViewController` and assigns it to the delegate. The viewState is set to `.achievements` to load the achievements view. Lastly, the `ViewController` is presented to the screen.
 
 Viewing leaderboard in Game Center
 ---
@@ -84,7 +84,7 @@ func showLeaderboards() {
         present(gcVC, animated: true, completion: nil)
     }
 ```
-Similar to the achivements, we can do the same for leaderboards. The only difference is that the viewState is set to .leaderboards to show leaderboards. Optionally, you can view a specific leaderboard by specifying the .leaderboardIdentifier to the identifier of the leaderboard you want.
+Similar to the achivements, we can do the same for leaderboards. The only difference is that the viewState is set to `.leaderboards` to show leaderboards. Optionally, you can view a specific leaderboard by specifying the `.leaderboardIdentifier` to the identifier of the leaderboard you want.
 
 Submit scores to Game Center
 ---
