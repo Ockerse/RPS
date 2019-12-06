@@ -1,6 +1,6 @@
 Overview
 =======
-The following tutorial will be using Apple's Gamekit framework using Swift 5. With Gamekit we can create applications that allow us to interact with other iOS users through Game Center's network. Some of the many examples you can implement to your own application are: achievements, leaderboards, and challenges. Through Game Center you are also able to add real time multiplayer or turn based multiplayer. The following screenshots below gives a small glance of what you will be able to create with Gamekit. Our game is Rock, Paper, Scissors and is adapted from Rminsh's RPS ([Link to repository](https://github.com/Rminsh/RPS))
+The following tutorial will be using Apple's `GameKit` framework using Swift 5. With GameKit we can create applications that allow us to interact with other iOS users through Game Center's network. Some of the many examples you can implement to your own application are: achievements, leaderboards, and challenges. Through Game Center you are also able to add real time multiplayer or turn based multiplayer. The following screenshots below gives a small glance of what you will be able to create with GameKit. Our game is Rock, Paper, Scissors and is adapted from Rminsh's RPS ([Link to repository](https://github.com/Rminsh/RPS))
 
 ![Image](doc/menu_screen_50_1_50.png "Main Menu") ![Image](doc/achievements_screen_50_1_50.png "Achievement Screen") ![Image](doc/leaderboards_screen_50_1_50.png "Leaderboard Screen") 
 
@@ -25,7 +25,7 @@ Once your app is registered, select it and go to **Features>Game Center**
 
 From here you can manage all of your achievements and leaderboards. When you make a new leaderboard or achievement keep in mind that the identifier you choose cannot be changed later. You will use this identifier in your code to save players progress and data to the leaderboard or achievement that corresponds to the identifier.
 
-You are now ready to start implementing Game Center in your code.
+You are now ready to start implementing `Game Center` in your code.
 
 Step-by-step coding instructions
 =======
@@ -71,7 +71,7 @@ func showAchievements() {
         present(gcVC, animated: true, completion: nil)
     }
 ```
-This code instantiates the `Game Center ViewController` and assigns it to the delegate. The viewState is set to `.achievements` to load the achievements view. Lastly, the `ViewController` is presented to the screen.
+This code instantiates the `Game Center ViewController` and assigns it to the delegate. The `viewState` is set to `.achievements` to load the achievements view. Lastly, the `ViewController` is presented to the screen.
 
 Viewing leaderboard in Game Center
 ---
@@ -84,7 +84,7 @@ func showLeaderboards() {
         present(gcVC, animated: true, completion: nil)
     }
 ```
-Similar to the achivements, we can do the same for leaderboards. The only difference is that the viewState is set to `.leaderboards` to show leaderboards. Optionally, you can view a specific leaderboard by specifying the `.leaderboardIdentifier` to the identifier of the leaderboard you want.
+Similar to the achivements, we can do the same for leaderboards. The only difference is that the `viewState` is set to `.leaderboards` to show leaderboards. Optionally, you can view a specific leaderboard by specifying the `.leaderboardIdentifier` to the identifier of the leaderboard you want.
 
 Submit scores to Game Center
 ---
