@@ -161,3 +161,6 @@ Game not recognized by Game Center
 
 Storing and returning scores
 ---
+
+Conclusion
+=======
