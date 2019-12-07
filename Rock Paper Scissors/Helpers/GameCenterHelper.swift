@@ -31,8 +31,6 @@ final class GameCenterHelper: NSObject {
     super.init()
     
     GKLocalPlayer.local.authenticateHandler = { gcAuthVC, error in
-      NotificationCenter.default.post(name: .authenticationChanged, object: GKLocalPlayer.local.isAuthenticated)
-
       if GKLocalPlayer.local.isAuthenticated {
         GKLocalPlayer.local.register(self)
       } else if let vc = gcAuthVC {
@@ -62,29 +60,6 @@ final class GameCenterHelper: NSObject {
     viewController?.present(vc, animated: true)
   }
     
-    
-    func loadAchievementProgress() {
-    GKAchievement.loadAchievements() { achievements, error in
-           guard let achievements = achievements else { return }
-          print(achievements)
-          
-          for ach in achievements {
-            
-              print("\(ach.identifier) : \(ach.percentComplete)")
-              
-              for (key, _) in Progress {
-                  if(ach.identifier == key){
-                    
-                      Progress.updateValue(ach.percentComplete, forKey: ach.identifier)
-                      
-                  }
-              }
-              
-         
-          }
-         }
-        
-    }
   
     /*
   func endTurn(_ model: GameModel, completion: @escaping CompletionBlock) {
